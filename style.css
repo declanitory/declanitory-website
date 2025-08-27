@@ -6,52 +6,76 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #fdfdfd;
-  color: #111;
-  line-height: 1.6;
-}
-
-#hero {
+  background: linear-gradient(180deg, #0e0e0e 0%, #1a1a1a 100%);
+  color: #fff;
   min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(8px);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2196f3; /* accent blue */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ddd;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2196f3;
+}
+
+/* CTA Button */
+.cta-btn {
+  background: #2196f3;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.cta-btn:hover {
+  background: #1976d2;
+}
+
+/* Hero Section */
+.hero {
+  padding: 5rem 3rem;
   text-align: center;
-  background: linear-gradient(135deg, #111, #333);
-  color: white;
 }
 
-#hero h2 {
-  font-size: 3rem;
+.hero h1 {
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
-#hero p {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.project-card {
-  flex: 1;
-  background: white;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+.hero p {
+  margin-top: 1rem;
+  color: #bbb;
+  font-size: 1.1rem;
 }
